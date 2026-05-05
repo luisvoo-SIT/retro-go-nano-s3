@@ -1,4 +1,4 @@
-# Retro-Go Nano-S3 Custom Build
+# Retro-Go Nano-S3 Custom Build (Luis edit)
 
 Custom build of Retro-Go for ESP32 Nano-S3 (ESP32-S3 + PSRAM).
 
@@ -42,7 +42,7 @@ Audio: I2S DAC (MAX98357A)
 
   Signal   GPIO
   -------- --------
-  3V3      3V3
+  3V3      3V3 // Could be 5V too
   CS       D3
   MOSI     D11
   CLK      D13
@@ -64,17 +64,19 @@ Audio: I2S DAC (MAX98357A)
   START    D7
   SELECT   D8
   MENU     D9
-  VOL      3V3 - R10k - B0 - Switch - GND
+  OPTION   D0
 
 ------------------------------------------------------------------------
 
-### Audio (MAX98357A - I2S)
+### Audio (PCM5102 - I2S)
 
   Signal   GPIO
   -------- --------
   LRC      A5
   BCLK     A3
   DIN      A4
+
+  Connect to the amp accordingly
 
 ### Battery Voltage Divider
 
@@ -126,7 +128,7 @@ components/retro-go/targets/nano-s3/
 ## Notes
 
 -   Requires PSRAM enabled
--   Designed for 300x240 ST7789 display
+-   Designed for 320x240 ST7789 display
 -   Optimized for Nano-S3 form factor
 
 ------------------------------------------------------------------------
