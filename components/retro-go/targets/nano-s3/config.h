@@ -53,7 +53,7 @@
         {RG_KEY_SELECT, .num = GPIO_NUM_17, .pullup = 1, .level = 0}, \
         {RG_KEY_START,  .num = GPIO_NUM_10, .pullup = 1, .level = 0},  \
         {RG_KEY_MENU,   .num = GPIO_NUM_18, .pullup = 1, .level = 0},   \
-        {RG_KEY_OPTION, .num = GPIO_NUM_46, .pullup = 0, .level = 0}, \
+        {RG_KEY_OPTION, .num = GPIO_NUM_44, .pullup = 1, .level = 0}, \
         {RG_KEY_A,      .num = GPIO_NUM_7,  .pullup = 1, .level = 0},       \
         {RG_KEY_B,      .num = GPIO_NUM_8,  .pullup = 1, .level = 0},       \
 }
