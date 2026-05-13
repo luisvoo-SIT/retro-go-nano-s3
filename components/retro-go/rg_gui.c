@@ -1046,6 +1046,7 @@ intptr_t rg_gui_dialog(const char *title, const rg_gui_option_t *options_const, 
     }
 
     rg_input_wait_for_key(joystick, false, 1000);
+    rg_gui_draw_rect(0, 0, gui.margins.left, gui.screen_height, 0, 0, C_BLACK); // Clear left border
     rg_display_force_redraw();
     // free(shadow_options);
     free(shadow_text_buffer);
