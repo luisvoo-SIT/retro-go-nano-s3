@@ -1,3 +1,4 @@
+
 # Retro-Go Nano-S3 Custom Build (Luis edit)
 
 Custom build of Retro-Go for ESP32 Nano-S3 (ESP32-S3 + PSRAM).
@@ -10,7 +11,7 @@ Based on upstream Retro-Go project.
 ------------------------------------------------------------------------
 
 ## GPIO Mapping
-
+<img width="1000" height="883" alt="ESP32-S3-Nano_Development_Board_contents_1" src="https://github.com/user-attachments/assets/2dbf33b3-3065-4c39-a793-7edf64288491" />
 ### TFT ST7789 (SPI)
 
 | Signal | GPIO |
