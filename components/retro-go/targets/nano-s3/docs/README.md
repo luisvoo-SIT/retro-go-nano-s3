@@ -9,82 +9,80 @@ Based on upstream Retro-Go project.
 
 ------------------------------------------------------------------------
 
-## Hardware
-
-Board: Waveshare ESP32-S3-Nano Development Board\
-Chip: ESP32-S3\
-PSRAM: Required\
-Flash: On-board QSPI
-
-Display: SPI TFT (ST7789)\
-Audio: I2S DAC (MAX98357A)
-
-------------------------------------------------------------------------
-
 ## GPIO Mapping
 
 ### TFT ST7789 (SPI)
 
-  Signal   GPIO
-  -------- --------
-  GND      GND
-  VCC      3V3
-  SCLK     D13
-  SDA      D11
-  RES      RST
-  DC       D10
-  CS       D2
-  BLK      A7
+| Signal | GPIO |
+| ------ | ---- |
+| GND    | GND  |
+| VCC    | 3V3  |
+| SCLK   | D13  |
+| SDA    | D11  |
+| RES    | RST  |
+| DC     | D10  |
+| CS     | D2   |
+| BLK    | A7   |
 
-------------------------------------------------------------------------
+---
 
 ### SD Card
 
-  Signal   GPIO
-  -------- --------
-  3V3      3V3 // Could be 5V too
-  CS       D3
-  MOSI     D11
-  CLK      D13
-  MISO     D12
-  GND      GND
+| Signal | GPIO                    |
+| ------ | ----------------------- |
+| 3V3    | 3V3 *(could be 5V too)* |
+| CS     | D3                      |
+| MOSI   | D11                     |
+| CLK    | D13                     |
+| MISO   | D12                     |
+| GND    | GND                     |
 
-------------------------------------------------------------------------
+---
 
 ### Buttons
 
-  Button   GPIO
-  -------- -------
-  UP       D6
-  DOWN     A1
-  LEFT     A2
-  RIGHT    A6
-  A        D4
-  B        D5
-  START    D7
-  SELECT   D8
-  MENU     D9
-  OPTION   D0
+| Button | GPIO |
+| ------ | ---- |
+| UP     | D6   |
+| DOWN   | A1   |
+| LEFT   | A2   |
+| RIGHT  | A6   |
+| A      | D4   |
+| B      | D5   |
+| START  | D7   |
+| SELECT | D8   |
+| MENU   | D9   |
+| OPTION | D0   |
 
-------------------------------------------------------------------------
+---
 
 ### Audio (PCM5102 - I2S)
 
-  Signal   GPIO
-  -------- --------
-  LRC      A5
-  BCLK     A3
-  DIN      A4
+| Signal | GPIO |
+| ------ | ---- |
+| LRC    | A5   |
+| BCLK   | A3   |
+| DIN    | A4   |
 
-  Connect to the amp accordingly
+Connect the PCM5102 output to the amplifier accordingly.
+
+---
 
 ### Battery Voltage Divider
 
+| Connection          | Description                           |
+| ------------------- | ------------------------------------- |
+| BAT+ → 100k → GPIO1 | Upper resistor                        |
+| GPIO1 → 100k → GND  | Lower resistor                        |
+| Midpoint            | Connects to GPIO1 for battery sensing |
+
+```text
 BAT+ --[100k]--+-- GPIO1
                |
              [100k]
                |
               GND
+```
 
 
 ------------------------------------------------------------------------
